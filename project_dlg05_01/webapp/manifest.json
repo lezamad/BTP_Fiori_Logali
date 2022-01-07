@@ -1,0 +1,115 @@
+{
+  "_version": "1.32.0",
+  "sap.app": {
+    "id": "LogaliOdata.projectdlg0501",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "dataSources": {
+      "EPM_REF_APPS_PROD_MAN_SRV": {
+        "uri": "/sap/opu/odata/sap/EPM_REF_APPS_PROD_MAN_SRV/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "localUri": "localService/metadata.xml",
+          "odataVersion": "4.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.97.0",
+      "libs": {
+        "sap.ui.core": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "LogaliOdata.projectdlg0501.i18n.i18n"
+        }
+      },
+      "": {
+        "dataSource": "EPM_REF_APPS_PROD_MAN_SRV",
+        "preload": true,
+        "settings": {
+          "synchronizationMode": "None",
+          "operationMode": "Server",
+          "autoExpandSelect": true,
+          "earlyRequests": true,
+          "groupId": "$direct"
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "LogaliOdata.projectdlg0501.view",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "clearControlAggregation": false
+      },
+      "routes": [
+        {
+          "name": "RouteView1_dlg05",
+          "pattern": "RouteView1_dlg05",
+          "target": [
+            "TargetView1_dlg05"
+          ]
+        }
+      ],
+      "targets": {
+        "TargetView1_dlg05": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "View1_dlg05",
+          "viewName": "View1_dlg05"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "LogaliOdata.projectdlg0501.view.View1_dlg05",
+      "type": "XML",
+      "async": true,
+      "id": "View1_dlg05"
+    }
+  }
+}

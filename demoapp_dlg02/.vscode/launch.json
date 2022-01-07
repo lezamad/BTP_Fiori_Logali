@@ -1,0 +1,81 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Start project2",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npx",
+      "cwd": "${workspaceFolder}/project2",
+      "windows": {
+        "runtimeExecutable": "npx.cmd"
+      },
+      "runtimeArgs": [
+        "fiori",
+        "run"
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "port": 9229,
+      "env": {
+        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/demoapp_dlg02/project2\"}",
+        "FIORI_TOOLS_BACKEND_CONFIG": "[{\"path\":\"/V3\",\"destination\":\"Northwind\"}]"
+      },
+      "args": [
+        "--open",
+        "'test/flpSandbox.html#project2-tile'"
+      ]
+    },
+    {
+      "name": "Start project2 Mock",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/project2",
+      "runtimeExecutable": "npx",
+      "windows": {
+        "runtimeExecutable": "npx.cmd"
+      },
+      "runtimeArgs": [
+        "fiori",
+        "run"
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "port": 9229,
+      "env": {
+        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/demoapp_dlg02/project2\"}"
+      },
+      "args": [
+        "--open",
+        "'test/flpSandboxMockServer.html#project2-tile'"
+      ]
+    },
+    {
+      "name": "Start project2 Local",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/project2",
+      "runtimeExecutable": "npm",
+      "windows": {
+        "runtimeExecutable": "npm.cmd"
+      },
+      "runtimeArgs": [
+        "run-script",
+        "start-local"
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "port": 9229,
+      "env": {
+        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/demoapp_dlg02/project2\"}"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "id": "UI5Version",
+      "type": "command",
+      "command": "sap.ux.appGenerator.ui5Version"
+    }
+  ]
+}

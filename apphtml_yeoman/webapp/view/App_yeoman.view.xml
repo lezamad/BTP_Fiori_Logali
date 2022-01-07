@@ -1,0 +1,19 @@
+<mvc:View
+    controllerName="Logaliyeoman.apphtmlyeoman.controller.App_yeoman"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+                       <Text text="Ejemplo Yeoman. desde línea de comando " id="Txt1"></Text>
+                       <Text text="02/12/2021" id="Txt2"></Text>
+                    </content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
